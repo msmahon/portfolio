@@ -1,2 +1,2 @@
 # portfolio
-Work completed and in progress,
+Work completed and in progress.
