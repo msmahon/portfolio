@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body Settings */
+
+body {
+    background-color: rgb(30,30,30);
+}
+
+/* Heading Settings */
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+p {
+    font-family: georgia, serif;
+    color: white;
+    font-size: .85rem;
+    line-height: 1.5rem;
+}
+
+/* Header Settings */
+
+#pageHead {
+    background-image: url(http://unsplash.it/g/2000/600/?random=1&gravity=center);
+    background-size: cover;
+    height: 350px;
+    padding-top: 50px;
+}
+
+#titleWrapper {
+    width: 700px;
+    margin: auto;
+}
+
+#titleBar {
+    background-color: rgb(30,30,30);
+    width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.navButton {
+    display: inline-block;
+    float: left;
+    width: 200px;
+    height: 70px;
+    margin-right: 50px;
+    background-color: rgb(30,30,30);
+    padding-top: 22px;
+    font-family: 'Oswald';
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.navButton:nth-child(4) {
+    margin-right: 0;
+}
+
+/* Content Secions */
+
+.contentSection {
+    width: 100%;
+    margin-top: 40px;
+    padding: 50px 100px;
+}
+
+.contentSection img {
+    width: 180px;
+    height: 180px;
+    float: left;
+    margin: 0 12px 6px 0;
+}
+
+.contentLeft {
+    padding: 30px 40px 0 0;
+    float: left;
+    width: 25%;
+    height: 800px;
+    border-right: 1px solid rgb(100,100,100);
+}
+
+.contentRight {
+    padding-top: 30px;
+    float: right;
+    width: 25%;
+    height: 800px;
+    border-left: 1px solid rgb(100,100,100);
+}
+
+.contentCenter {
+    padding: 30px 40px 0 40px;
+    float: left;
+    width: 50%;
+    height: 800px;
+}

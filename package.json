@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Work completed and in progress.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msmahon/portfolio.git"
+  },
+  "author": "Mitchell Mahoney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msmahon/portfolio/issues"
+  },
+  "homepage": "https://github.com/msmahon/portfolio#readme",
+  "dependencies": {
+    "ejs": "^2.3.3",
+    "express": "^4.13.3"
+  }
+}
