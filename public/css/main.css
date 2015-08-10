@@ -1,16 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
-
 * {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* Body Settings */
 
 body {
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
+    height: 3000px;
 }
+
 
 /* Heading Settings */
 
@@ -27,20 +27,40 @@ h2 {
     color: white;
 }
 
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    color: rgb(170, 170, 170);
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: rgb(30, 30, 30);
+    display: inline;
+    background-color: rgb(170, 170, 170);
+    padding: 0 4px;
+    position: relative;
+    top: 2px;
+}
+
 p {
     font-family: georgia, serif;
-    color: white;
-    font-size: .85rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7rem;
 }
+
 
 /* Header Settings */
 
 #pageHead {
-    background-image: url(http://unsplash.it/g/2000/600/?random=1&gravity=center);
+    background-image: url(http://unsplash.it/g/2500/900/?random=1&gravity=center);
     background-size: cover;
     height: 350px;
     padding-top: 50px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
 }
 
 #titleWrapper {
@@ -48,8 +68,13 @@ p {
     margin: auto;
 }
 
+#titleWrapper a {
+    display: block;
+    text-decoration: none;
+}
+
 #titleBar {
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
     width: 700px;
     margin: auto;
     margin-bottom: 30px;
@@ -62,7 +87,7 @@ p {
     width: 200px;
     height: 70px;
     margin-right: 50px;
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
     padding-top: 22px;
     font-family: 'Oswald';
     color: white;
@@ -70,44 +95,143 @@ p {
     font-size: 1.5rem;
 }
 
-.navButton:nth-child(4) {
+.lastNav {
     margin-right: 0;
 }
 
-/* Content Secions */
+
+/* Content Sections */
 
 .contentSection {
-    width: 100%;
-    margin-top: 40px;
-    padding: 50px 100px;
-}
-
-.contentSection img {
-    width: 180px;
-    height: 180px;
+    clear: both;
     float: left;
-    margin: 0 12px 6px 0;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .contentLeft {
-    padding: 30px 40px 0 0;
+    padding: 48px 40px 0 0;
     float: left;
     width: 25%;
-    height: 800px;
-    border-right: 1px solid rgb(100,100,100);
+    color: rgb(170, 170, 170);
 }
 
 .contentRight {
-    padding-top: 30px;
+    padding: 0 0 0 40px;
     float: right;
     width: 25%;
-    height: 800px;
-    border-left: 1px solid rgb(100,100,100);
+    color: rgb(170, 170, 170);
 }
 
 .contentCenter {
-    padding: 30px 40px 0 40px;
+    padding: 0 40px 120px 40px;
     float: left;
     width: 50%;
-    height: 800px;
+    color: white;
+    border-right: 1px solid rgb(100, 100, 100);
+    border-left: 1px solid rgb(100, 100, 100);
+}
+
+/* One off content settings */
+
+#bio img {
+    width: 175px;
+    height: 175px;
+    float: left;
+    margin: 8px 12px 6px 0;
+}
+
+.company {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: rgb(30, 30, 30);
+    background-color: rgb(120,120,120);
+    width: 180px;
+    padding: 4px 5px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    right: 140px;
+    z-index: -1;
+    transition: right ease-in-out 0.5s, width 0.5s;
+    -webkit-transition: right ease-in-out 0.5s, width 0.5s;
+}
+
+.title:hover + .company{
+    right: 0;
+    width: 138px;
+}
+
+/* Project Block Settings */
+
+.projectBlock {
+    border-bottom: 1px dashed rgb(170, 170, 170);
+    padding: 8px;
+}
+
+.projectBlock:first-of-type {
+    border-top: solid 1px white;
+}
+
+.projectBlock p {
+    display: inline;
+    color: rgb(170, 170, 170);
+}
+
+.projectBlock a {
+    text-decoration: none;
+    display: block;
+}
+
+.blockLink:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+/* TALENT CSS */
+
+#talent h2 {
+    margin-top: 40px;
+}
+
+#talent h3 {
+    margin-top: 40px;
+}
+
+#badges {
+    margin: 30px 0;
+    display: flex;
+}
+
+#badges img {
+    display: block;
+    float: left;
+    height: 80px;
+    margin: 0 auto;
+}
+
+/* WORK CSS */
+
+#work h2 {
+    margin-top: 60px;
+}
+
+#work .contentRight {
+    margin-top: 100px;
+}
+
+#thumbsContainer {
+    width: 100%;
+}
+
+.thumb {
+    float: left;
+    width: 33%;
+    margin-bottom: 30px;
+}
+
+#thumbsContainer img {
+    width: 90%;
 }
