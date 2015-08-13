@@ -11,7 +11,8 @@ $(document).ready(function() {
 	        window.location.hash = target;
 	    });
 	});
+});
 
-	// Match child divs to content block height
-	// $('.contentSection').children('.contentCenter').css('height', $('#talent').height());
+$(function(){
+    $("input.autogrow").autoGrowInput({minWidth:170,comfortZone:10});
 });
