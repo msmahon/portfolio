@@ -289,6 +289,10 @@ p {
     margin-top: 60px;
 }
 
+#contact .contentLeft {
+    margin-top: 60px;
+}
+
 #contactForm {
     margin-top: 20px;
     width: 100%;
@@ -321,6 +325,20 @@ input {
 
 textarea {
     width: 100%;
+    margin-bottom: 12px;
+}
+
+input[type="submit"] {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(170,170,170);
+    width: 120px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.5);
+    background-color: rgb(190,190,190);
 }
 
 /* FOOTER SECTION */

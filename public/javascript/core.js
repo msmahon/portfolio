@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	// Makes anchor linkes scroll instead of jump
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 
@@ -13,6 +15,8 @@ $(document).ready(function() {
 	});
 });
 
+
+//Autogrows input fields where 'autogrow' class is attached
 $(function(){
     $("input.autogrow").autoGrowInput({minWidth:170,comfortZone:10});
 });
