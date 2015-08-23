@@ -5,7 +5,7 @@ var app = express();
 
 
 // set body parser
-app.use(bodyParser.urlencoded({extended: false }));
+app.use(bodyParser.json());
 
 // NodeMailer Settings
 
@@ -17,16 +17,6 @@ var transporter = nodemailer.createTransport({
         pass: 'xxx'
     }
 });
-
-// var mailOptions = {
-// 	from: 'email address',
-
-// }
-
-
-
-
-
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -46,14 +36,30 @@ app.get('/', function(req, res) {
 });
 
 // Process email form
-app.post('/', function(req,res) {
-	console.log(req.body.fromEmail);
-	console.log(req.body.subject);
-	console.log(req.body.message);
-	res.render('pages/index');
+app.post('/message', function(req,res) {
+	console.log('Request received by email path.');  
+	console.log('Email: ' + req.body.email);
+	console.log('Subject: ' + req.body.subject);
+	console.log('Message: ' + req.body.message);
+
+	var mailOptions = {
+	    from: req.body.email, // sender address
+	    to: 'mahoneywebmail@gmail.com', // list of receivers
+	    subject: req.body.subject, // Subject line
+	    text: 'Email sent by ' + req.body.email + ':\n\n' + req.body.message, // plaintext body
+	};
+
+	transporter.sendMail(mailOptions, function(error, info){
+    	if(error){
+        	console.log(error);
+    	} else {
+        	console.log('Message sent: ' + info.response);
+    	}
+	});
+
+	res.send({"success": true});
+	console.log('Response sent.');
 });
-
-
 
 
 app.listen(port, function() {

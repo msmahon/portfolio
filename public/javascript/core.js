@@ -15,8 +15,7 @@ $(document).ready(function() {
 	});
 });
 
-
-//Autogrows input fields where 'autogrow' class is attached
+// Autogrows input fields where 'autogrow' class is attached
 $(function(){
     $("input.autogrow").autoGrowInput({minWidth:170,comfortZone:10});
 });
