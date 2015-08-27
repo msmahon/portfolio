@@ -21,7 +21,19 @@ function sendEmail() {
 		if (httpRequest.readyState == 4 && httpRequest.status == 200) {
 			var response = JSON.parse(httpRequest.responseText);
 			if(response.success == true) {
-				alert('Your message has been sent. Thanks!')
+				$('#fromEmail').val('');
+				$('#subject').val('');
+				$('#message').val('');
+				$('#confirmation').addClass('success').css("border-color", "rgb(57,135,57)").text('YOUR MESSAGE WAS SENT SUCCESSFULLY.');
+				$('#confirmation').animate({opacity:1});
+				$('#confirmation').delay(5000).animate({opacity:0});
+			} else {
+				$('#fromEmail').val('');
+				$('#subject').val('');
+				$('#message').val('');
+				$('#confirmation').addClass('failure').css("border-color", "rgb(135,57,57)").text('AN ERROR HAS OCCURRED.');
+				$('#confirmation').animate({opacity:1});
+				$('#confirmation').delay(5000).animate({opacity:0});
 			};
 		}
 	}

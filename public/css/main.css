@@ -61,7 +61,7 @@ p {
     height: 350px;
     padding-top: 50px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #titleWrapper {
@@ -112,21 +112,21 @@ p {
 }
 
 .contentLeft {
-    padding: 48px 40px 0 0;
+    padding: 36px 40px 0 0;
     float: left;
     width: 25%;
     color: rgb(170, 170, 170);
 }
 
 .contentRight {
-    padding: 0 0 0 40px;
+    padding: 42px 0 0 40px;
     float: right;
     width: 25%;
     color: rgb(170, 170, 170);
 }
 
 .contentCenter {
-    padding: 0 40px 120px 40px;
+    padding: 0 40px 0 40px;
     float: left;
     width: 50%;
     color: white;
@@ -159,27 +159,34 @@ p {
     background-color: white;
 }
 
+.titleWrapper {
+    position: relative;
+}
+
 .company {
     font-family: 'Oswald', sans-serif;
     font-size: 1rem;
     color: rgb(30, 30, 30);
     background-color: rgb(120,120,120);
-    width: 180px;
+    width: -moz-max-content;
+    width: max-content;
     padding: 4px 5px;
     margin-bottom: 4px;
     white-space: nowrap;
     display: inline-block;
     position: relative;
     top: 2px;
-    right: 140px;
     z-index: -1;
     transition: right ease-in-out 0.5s, width 0.5s;
     -webkit-transition: right ease-in-out 0.5s, width 0.5s;
 }
 
-.title:hover + .company{
-    right: 0;
-    width: 138px;
+.company2 {
+    display: none;
+}
+
+#projects {
+    margin-top: 330px;
 }
 
 /* Project Block Settings */
@@ -207,11 +214,12 @@ p {
     background-color: rgb(40, 40, 40);
 }
 
-/* TALENT CSS */
-
-#talent h2 {
-    margin-top: 40px;
+.sectionBlock {
+    margin-bottom: 150px;
+    padding-top: 40px;
 }
+
+/* TALENT CSS */
 
 #talent h3 {
     margin-top: 40px;
@@ -235,10 +243,6 @@ p {
 
 /* WORK CSS */
 
-#work h2 {
-    margin-top: 60px;
-}
-
 #work .contentRight {
     margin-top: 100px;
 }
@@ -254,6 +258,7 @@ p {
     position: relative;
     width: 30%;
     margin-bottom: 35px;
+    image-size: cover;
 }
 
 .overlay {
@@ -278,6 +283,25 @@ p {
     color: rgba(0,0,0,0);
 }
 
+#work a:visited {
+    color: white;
+}
+
+#work a {
+    color: white;
+}
+
+#project1 {
+    background-image: url('/public/images/munchBuggeeBW.png');
+    background-size: cover;
+    transition: background-image 0.2s;
+}
+
+#project1:hover {
+    background-image: url('/public/images/munchBuggee.png');
+}
+
+
 #thumbsContainer img {
     width: 100%;
     height: 100%;
@@ -285,12 +309,12 @@ p {
 
 /* CONTACT SETTINGS */
 
-#contact h2 {
+#contact .contentLeft {
     margin-top: 60px;
 }
 
-#contact .contentLeft {
-    margin-top: 60px;
+div#contact.sectionBlock {
+    margin-bottom: 50px;
 }
 
 #contactForm {
@@ -341,11 +365,235 @@ input[type="submit"]:hover {
     background-color: rgb(190,190,190);
 }
 
+#confirmation {
+    padding: 10px;
+    margin-top: 15px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    width: -moz-max-content;
+    width: max-content;
+    opacity: 0;
+    border: 6px solid;
+}
+
+.success {
+    background-color: rgb(56,93,56);
+}
+
+.failure {
+    background-color: rgb(93,56,56);
+}
+
 /* FOOTER SECTION */
 
 #bodyFooter {
     float: left;
     width: 100%;
-    height: 100px;
+    height: 70px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(50,50,50);
     background-color: rgb(170,170,170);
+    padding-top: 28px;
+}
+
+
+/* RESPONSIZE CSS SETTINGS */
+
+/* ----------- Non-Retina Screens ----------- */
+
+@media screen and (min-width: 1600px) and (max-width: 1720px) {
+    .company {
+        display: none;
+        background-color: rgb(30,30,30);
+    }
+
+    .company2 {
+        display: block;
+        padding: 9px 0 5px 0;
+        color: white;
+        background: none;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1600px) {
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    #bio img {
+        width: 165px;
+        height: 165px;
+    }
+
+    .contentSection {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .company {
+        display: none;
+        background-color: rgb(30,30,30);
+    }
+
+    .company2 {
+        display: block;
+        padding: 9px 0 5px 0;
+        color: white;
+        background: none;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1500px) {
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    #bio img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contentSection {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .company {
+        display: none;
+        background-color: rgb(30,30,30);
+    }
+
+    .company2 {
+        display: block;
+        padding: 9px 0 5px 0;
+        color: white;
+        background: none;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .sectionBlock {
+        margin-bottom: 215px;
+    }
+
+    #projects h4, #experience .title h4 {
+        color: rgb(170,170,170);
+        background: none;
+        padding-left: 0;
+    }
+
+    #projects {
+        margin-top: 178px;
+    }
+
+    #bio img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .company {
+        display: none;
+        background-color: rgb(30,30,30);
+    }
+
+    .company2 {
+        display: block;
+        padding: 9px 0 5px 0;
+        color: white;
+        background: none;
+    }
+
+    #badges img {
+        height: 60px;
+    }
+
+    .contentSection {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .contentLeft {
+        padding-right: 25px;
+    }
+
+    .contentRight {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .contentSection {
+        padding: 0 60px;
+    }
+    .contentLeft {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .contentCenter {
+        width: 100%;
+        border-right: none;
+        border-left: none;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .contentRight {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .sectionBlock {
+        margin-bottom: 24px;
+    }
+
+    #social {
+        width: 50%
+    }
+
+    #projects {
+        margin-top: 60px;
+    }
+
+    #projects h3 {
+        text-align: left;
+        padding-left: 8px;
+    }
+
+    #experience {
+        margin-top: 100px;
+    }
+
+    #experience h3 {
+        text-align: left;
+        padding-left: 8px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+    #titlebar {
+        width: 80%;
+    }
+
+    #navContainer {
+        width: 80%;
+    }
+
+    .navButton {
+        width: 
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-width: 1200px) and (max-width: 1600px) { 
+    
 }

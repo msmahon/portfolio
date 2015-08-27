@@ -14,7 +14,7 @@ var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: 'mahoneywebmail@gmail.com',
-        pass: 'xxx'
+        pass: 'Salmonhat1'
     }
 });
 
@@ -49,15 +49,17 @@ app.post('/message', function(req,res) {
 	    text: 'Email sent by ' + req.body.email + ':\n\n' + req.body.message, // plaintext body
 	};
 
+	var successCondition;
 	transporter.sendMail(mailOptions, function(error, info){
     	if(error){
         	console.log(error);
+        	res.send({"success": false});
     	} else {
         	console.log('Message sent: ' + info.response);
+        	res.send({"success": true});
     	}
 	});
-
-	res.send({"success": true});
+	
 	console.log('Response sent.');
 });
 

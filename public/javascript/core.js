@@ -13,7 +13,35 @@ $(document).ready(function() {
 	        window.location.hash = target;
 	    });
 	});
+	
+	// Controls Company scroll in experience section
+	if ( $(window).width() > 1720 ) {
+		$(".title").hover(
+			function() {
+				$(this).next().hide().text('Electric City Printing').fadeIn(200);
+			}, function() {
+				$(this).next().hide().text('ECP').fadeIn(200);
+
+			}
+		);
+	}
+
+	// Change order of divs at low page width
+	if( $(window).width() < 1000 ) {
+        $("#experience").remove().insertAfter($("#bio"));
+        $(".company").text("Electric City Printing");
+    }
 });
+
+// Change order of divs at low page width
+
+$(document).load($(window).bind("resize", listenWidth));
+
+function listenWidth( e ) {
+    if( $(window).width() < 1000 ) {
+        $("#experience").remove().insertAfter($("#bio"));
+    }
+}
 
 // Autogrows input fields where 'autogrow' class is attached
 $(function(){
