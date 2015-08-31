@@ -31,6 +31,11 @@ $(document).ready(function() {
         $("#experience").remove().insertAfter($("#bio"));
         $(".company").text("Electric City Printing");
     }
+
+    // Remove button hover on paghead at sizes less than 450px
+    if( $(window).width() < 450 ) {
+        $("#navContainer").find('li').removeClass('hvr-float');
+    }
 });
 
 // Change order of divs at low page width
