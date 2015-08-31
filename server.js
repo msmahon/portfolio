@@ -9,12 +9,15 @@ app.use(bodyParser.json());
 
 // NodeMailer Settings
 
+// Get heroku environment variable
+var mail_pass = process.env.MAIL_PASSWORD;
+
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: 'mahoneywebmail@gmail.com',
-        pass: 'xxx'
+        pass: mail_pass
     }
 });
 
