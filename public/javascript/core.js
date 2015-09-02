@@ -39,16 +39,12 @@ $(document).ready(function() {
 });
 
 // Change order of divs at low page width
-
-$(document).load($(window).bind("resize", listenWidth));
+if( $(window).width() < 450 ) {
+	$(document).load($(window).bind("resize", listenWidth));
+}
 
 function listenWidth( e ) {
     if( $(window).width() < 1000 ) {
         $("#experience").remove().insertAfter($("#bio"));
     }
 }
-
-// Autogrows input fields where 'autogrow' class is attached
-$(function(){
-    $("input.autogrow").autoGrowInput({minWidth:170,comfortZone:10});
-});

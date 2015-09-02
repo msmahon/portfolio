@@ -263,7 +263,7 @@ p {
 
 .overlay {
     position: absolute;
-    display: block;
+    display: table;
     top: 0;
     left: 0;
     width: 100%;
@@ -273,9 +273,13 @@ p {
     font-family: 'Oswald';
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 40%;
     transition: background-color 0.5s, color 0.5s;
     overflow: hidden;
+}
+
+.thumbText {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .overlay:hover {
@@ -344,7 +348,7 @@ input, textarea {
 input {
     float: left;
     margin: 0 12px 12px 0;
-    width: 180px;
+    width: 300px;
 }
 
 textarea {
@@ -364,6 +368,30 @@ input[type="submit"] {
 input[type="submit"]:hover {
     box-shadow: 0 2px 0 rgba(0,0,0,0.5);
     background-color: rgb(190,190,190);
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 0;
+    border: none;
+    background-color: rgb(170,170,170);
+    color: rgb(30,30,30);
+    font-family: 'Oswalt', sans-serif;
+    font-size: 1.25rem;
+    box-shadow: 1px 5px rgba(0,0,0,0.4)
+}
+
+button:hover {
+    width: 100%;
+    height: 40px;
+    border-radius: 0;
+    border: none;
+    background-color: rgb(170,170,170);
+    color: rgb(30,30,30);
+    font-family: 'Oswalt', sans-serif;
+    font-size: 1.25rem;
+    box-shadow: 1px 1px rgba(0,0,0,0.4)
 }
 
 #confirmation {
@@ -532,7 +560,7 @@ input[type="submit"]:hover {
 
 @media screen and (min-width: 300px) and (max-width: 1000px) {
     .contentSection {
-        padding: 0 60px;
+        padding: 0 40px;
     }
 
     .contentLeft {
@@ -572,6 +600,7 @@ input[type="submit"]:hover {
 
     #experience {
         margin-top: 100px;
+        clear: left;
     }
 
     #experience h3 {
@@ -588,7 +617,9 @@ input[type="submit"]:hover {
     }
 
     #social { 
-        padding-left: 25px;
+        float: left;
+        clear: both;
+        margin-bottom: 80px;
     }
 
     #titleBar {
@@ -621,6 +652,25 @@ input[type="submit"]:hover {
 
     h1 {
         font-size: 2rem;
+    }
+
+    #social { 
+        float: left;
+        clear: both;
+        width: 100%;
+        display: block;
+        margin-bottom: 80px;
+    }
+
+    #social a, #social h4 {
+        width: 100%;
+        height: 30px;
+        float: left;
+        display: inline-block;
+        clear: left;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 5px;
     }
 
     .contentSection { 
@@ -656,10 +706,6 @@ input[type="submit"]:hover {
     #badges img {
         height: 60px;
     }
-    
-    .overlay {
-        padding-top: 30px;
-    }
 
 }
 
@@ -687,7 +733,6 @@ input[type="submit"]:hover {
 
     .overlay {
          font-size: 1rem;
-         padding-top: 40px;
     }
 
     #badges {
@@ -700,6 +745,25 @@ input[type="submit"]:hover {
         margin-top: 30px;
         padding: 0 15px;
     }
+
+    #fromEmail, #subject {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        border-radius: 0;
+        border: none;
+        background-color: rgb(170,170,170);
+        color: rgb(30,30,30);
+        font-family: 'Oswalt', sans-serif;
+        font-size: 1.25rem;
+    }
+
+    textarea {
+        height: 12em;
+    }
 }
 
 @media screen and (min-width: 250px) and (max-width: 350px) {
@@ -710,9 +774,4 @@ input[type="submit"]:hover {
     #badges img {
         height: 60px;
     }
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen and (min-width: 1200px) and (max-width: 1600px) { 
-    
 }
