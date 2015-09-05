@@ -14,17 +14,17 @@ $(document).ready(function() {
 	    });
 	});
 	
-	// Controls Company scroll in experience section
-	if ( $(window).width() > 1720 ) {
-		$(".title").hover(
-			function() {
-				$(this).next().hide().text('Electric City Printing').fadeIn(200);
-			}, function() {
-				$(this).next().hide().text('ECP').fadeIn(200);
+	// Controls Company mouseover in experience section
+	// if ( $(window).width() > 1720 ) {
+	// 	$(".title").hover(
+	// 		function() {
+	// 			$(this).next().hide().text('Electric City Printing').fadeIn(200);
+	// 		}, function() {
+	// 			$(this).next().hide().text('ECP').fadeIn(200);
 
-			}
-		);
-	}
+	// 		}
+	// 	);
+	// }
 
 	// Change order of divs at low page width
 	if( $(window).width() < 1000 ) {

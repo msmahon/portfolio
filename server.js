@@ -29,7 +29,7 @@ var port = process.env.PORT || 8000;
 app.set('view engine', 'ejs');
 
 // Include static CSS directory
-app.use('/public', express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/public',  { maxAge: 86400000 }));
 
 // use res.render to load up an ejs view file
 

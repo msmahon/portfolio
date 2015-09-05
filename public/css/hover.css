@@ -2861,7 +2861,7 @@
   transform: translateY(-5px);
   /* move the element up by 5px */
 }
-.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+.-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
   opacity: 1;
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
