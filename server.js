@@ -1,11 +1,13 @@
 var express = require('express');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
+var compression = require('compression');
 var app = express();
 
 
-// set body parser
+// set body parser and compression
 app.use(bodyParser.json());
+app.use(compression());
 
 // NodeMailer Settings
 

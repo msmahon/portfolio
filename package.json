@@ -18,6 +18,7 @@
   "homepage": "https://github.com/msmahon/portfolio#readme",
   "dependencies": {
     "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
     "ejs": "^2.3.3",
     "express": "^4.13.3",
     "nodemailer": "^1.4.0"
