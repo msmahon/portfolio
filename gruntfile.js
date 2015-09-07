@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		watch: {
 			styles: {
 				files: ['public/css/main.css'],
-				tasks: ['cssmin']
+				tasks: ['postcss', 'cssmin']
 			},
 			scripts: {
 				files: ['public/javascript/core.js', 'public/javascript/email.js'],
@@ -31,7 +31,18 @@ module.exports = function(grunt) {
 					'public/javascript/output.min.js': ['public/javascript/core.js', 'public/javascript/email.js']
 				}
 			}
-		}
+		},
+
+		postcss: {
+		    options: {
+				processors: [
+					require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+				]
+			},
+			dist: {
+				src: 'public/css/main.css'
+			}
+	  	}
 
 	});
 
@@ -39,4 +50,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-postcss');
 }
